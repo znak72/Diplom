@@ -1,0 +1,7 @@
+---
+- hosts: alll
+  remote_user: znak
+  become: yes
+  become_method: sudo
+  roles:
+    - zabbix-agent
