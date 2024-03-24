@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: znak
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA17R0fL/vXUwgJBvAkW+6M7qFOMU0J8SxDGBJko9tFOw+03DE9wrfUzqBOg6dGrqPjMcbQ7q2CDqo7KpAXWZlNRGi5RkgJclI4jWDKhnX19hvmlf/8Wdqc4PSPmuL423DPY4Ma5i1bNEuTsSKYyAQiacZRDSafSghCkI0bJfhPe6pdVOp0OHjd8l1uF5xr4I+2DQtyAxzW7JyP6gSnOuySGoXm7T+D0RVJbu9hwAVPd+gCFGo1GL8ywWv5Wto/KRy8xdiONmTDDf+Qkm7cWGfdEySCyrVHuI8z7sl3oFADA53sEaj8IoGxPsvkFCyQq+kbYdeoPEWhC+YCLIIJwGVPw== znak
+
+disable_root: true
+timezone: Europe/Moscow
+repo_update: true
+repo_upgrade: true
+apt:
+  preserve_sources_list: true
